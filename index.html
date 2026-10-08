@@ -78,7 +78,7 @@
 
     .video-container {
       max-width: 640px;
-      margin: 0 auto 22px;
+      margin: 0 auto 28px;
       border-radius: 12px;
       overflow: hidden;
       background: #000;
@@ -119,17 +119,6 @@
       color: var(--color-text-light);
       background: rgba(0,0,0,0.65);
       border-top: 1px solid var(--color-border);
-    }
-
-    .hero-proof {
-      display: inline-block;
-      font-size: 0.78rem;
-      color: #bbbbbb;
-      border-top: 1px solid rgba(230,57,70,0.3);
-      border-bottom: 1px solid rgba(230,57,70,0.3);
-      padding: 6px 14px;
-      margin: 12px 0 24px;
-      letter-spacing: 0.3px;
     }
 
     /* CTA principal */
@@ -186,7 +175,7 @@
     }
 
     /* ============================================================
-       TAGS DE CAMPO (SITUAÇÃO, DECISÃO, ATENÇÃO)
+       TAGS DE CAMPO
     ============================================================ */
     .tag-field {
       display: inline-block;
@@ -203,7 +192,7 @@
     }
 
     /* ============================================================
-       SEÇÃO: SITUAÇÃO REAL
+       SITUAÇÃO REAL
     ============================================================ */
     .situation-card {
       max-width: 720px;
@@ -292,7 +281,7 @@
     }
 
     /* ============================================================
-       SEÇÃO: TEORIA SOZINHA
+       TEORIA SOZINHA
     ============================================================ */
     .theory-text {
       max-width: 680px;
@@ -348,7 +337,7 @@
     }
 
     /* ============================================================
-       SEÇÃO: MANUAL FOI CRIADO
+       MANUAL FOI CRIADO
     ============================================================ */
     .manual-intro {
       max-width: 720px;
@@ -402,7 +391,7 @@
     .manual-keyphrase span { color: var(--color-accent); display: block; margin-top: 6px; }
 
     /* ============================================================
-       8 GUIAS (COMO SITUAÇÕES)
+       8 GUIAS
     ============================================================ */
     .guides-grid {
       display: grid;
@@ -460,7 +449,6 @@
       font-style: italic;
       padding-left: 54px;
       margin-bottom: 12px;
-      border-left: none;
     }
 
     .guide-desc {
@@ -578,6 +566,7 @@
       font-size: clamp(0.9rem, 3.2vw, 0.98rem);
       color: #dddddd;
     }
+    .authority-list li:last-child { border-bottom: none; }
     .authority-list li i {
       color: var(--color-accent);
       font-size: 0.9rem;
@@ -599,76 +588,6 @@
       border-radius: 18px;
       border: 2px solid rgba(230,57,70,0.4);
       display: block;
-    }
-
-    /* ============================================================
-       PROVA SOCIAL
-    ============================================================ */
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-top: 30px;
-    }
-
-    .testimonial-card {
-      background: var(--color-card);
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      padding: 22px;
-      transition: var(--transition);
-    }
-    .testimonial-card:hover {
-      border-color: rgba(230,57,70,0.4);
-    }
-
-    .testimonial-text {
-      font-size: clamp(0.9rem, 3.2vw, 0.98rem);
-      line-height: 1.65;
-      color: #cccccc;
-      margin-bottom: 16px;
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .testimonial-avatar {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(230,57,70,0.5);
-      overflow: hidden;
-      flex-shrink: 0;
-      background: #222;
-    }
-    .testimonial-avatar img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .testimonial-author strong {
-      display: block;
-      font-size: 0.9rem;
-      color: #ffffff;
-    }
-    .testimonial-author span {
-      font-size: 0.75rem;
-      color: var(--color-text-dim);
-    }
-
-    .proof-stats {
-      text-align: center;
-      margin-top: 36px;
-      font-size: 0.95rem;
-      color: #dddddd;
-    }
-    .proof-stats strong {
-      color: var(--color-accent);
-      font-weight: 800;
     }
 
     /* ============================================================
@@ -776,16 +695,6 @@
       margin-bottom: 4px;
     }
 
-    .offer-support {
-      color: var(--color-text-light);
-      font-size: 0.85rem;
-      margin-top: 18px;
-    }
-    .offer-support i {
-      color: #25D366;
-      margin-right: 5px;
-    }
-
     /* ============================================================
        FAQ
     ============================================================ */
@@ -863,29 +772,6 @@
     .final-cta-title .highlight { color: var(--color-accent); }
 
     /* ============================================================
-       WHATSAPP FLUTUANTE
-    ============================================================ */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.55rem;
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
-      z-index: 1000;
-      text-decoration: none;
-      transition: var(--transition);
-    }
-    .whatsapp-float:hover { transform: scale(1.1); }
-
-    /* ============================================================
        FOOTER
     ============================================================ */
     .footer {
@@ -901,7 +787,6 @@
     ============================================================ */
     @media (min-width: 640px) {
       .guides-grid { grid-template-columns: 1fr 1fr; }
-      .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
       .forwho-grid { grid-template-columns: 1fr 1fr; }
     }
 
@@ -919,7 +804,6 @@
       .guide-desc { padding-left: 58px; }
     }
 
-    /* Reduzir movimento para quem prefere */
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; animation: none !important; }
     }
@@ -944,7 +828,6 @@
 
       <div class="video-container">
         <div class="video-wrapper">
-          <!-- 📸 SUBSTITUIR poster quando tiver imagem real -->
           <video id="mainVideo" playsinline muted preload="metadata" poster="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
             <source src="https://banhistatosador.com/wp-content/uploads/2024/12/Sem-Nome.mp4" type="video/mp4">
           </video>
@@ -957,19 +840,15 @@
         </div>
       </div>
 
-      <div>
-        <span class="hero-proof">✅ Mais de 200 profissionais já passaram por aqui</span>
-      </div>
-
-      <!-- 🔗 SUBSTITUIR href pelo link real do checkout -->
-      <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" target="_blank" rel="noopener" class="cta-primary">
+      <!-- 🔗 SUBSTITUIR href pelo link real da Kiwify -->
+      <a href="[COLAR AQUI QUANDO EXISTIR]" target="_blank" rel="noopener" class="cta-primary">
         <i class="fas fa-book-open"></i> QUERO MEU MANUAL DE CAMPO
       </a>
     </div>
   </section>
 
   <!-- ============================================================
-       SEÇÃO 2 — SITUAÇÃO REAL (É AQUI QUE O INICIANTE TRAVA)
+       SITUAÇÃO REAL
   ============================================================ -->
   <section class="section section-card">
     <div class="container">
@@ -999,7 +878,6 @@
         </p>
       </div>
 
-      <!-- 📸 SUBSTITUIR por foto real do cachorro na mesa com as lâminas -->
       <div class="media-placeholder">
         <i class="fas fa-camera"></i>
         📸 Espaço reservado para foto real (cachorro na mesa + lâminas + mãos)
@@ -1008,7 +886,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 3 — TEORIA SOZINHA
+       TEORIA SOZINHA
   ============================================================ -->
   <section class="section section-dark">
     <div class="container">
@@ -1037,7 +915,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 4 — MANUAL FOI CRIADO
+       MANUAL FOI CRIADO
   ============================================================ -->
   <section class="section section-card">
     <div class="container">
@@ -1071,7 +949,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 5 — OS 8 GUIAS (COMO SITUAÇÕES)
+       OS 8 GUIAS
   ============================================================ -->
   <section class="section section-dark">
     <div class="container">
@@ -1082,7 +960,6 @@
 
       <div class="guides-grid">
 
-        <!-- 01 -->
         <div class="guide-card">
           <div class="guide-head">
             <div class="guide-number">01</div>
@@ -1096,7 +973,6 @@
           </p>
         </div>
 
-        <!-- 02 -->
         <div class="guide-card">
           <div class="guide-head">
             <div class="guide-number">02</div>
@@ -1110,7 +986,6 @@
           </p>
         </div>
 
-        <!-- 03 -->
         <div class="guide-card">
           <div class="guide-head">
             <div class="guide-number">03</div>
@@ -1124,7 +999,6 @@
           </p>
         </div>
 
-        <!-- 04 -->
         <div class="guide-card">
           <div class="guide-head">
             <div class="guide-number">04</div>
@@ -1138,7 +1012,6 @@
           </p>
         </div>
 
-        <!-- 05 -->
         <div class="guide-card">
           <div class="guide-head">
             <div class="guide-number">05</div>
@@ -1152,7 +1025,6 @@
           </p>
         </div>
 
-        <!-- 06 -->
         <div class="guide-card">
           <div class="guide-head">
             <div class="guide-number">06</div>
@@ -1166,7 +1038,6 @@
           </p>
         </div>
 
-        <!-- 07 -->
         <div class="guide-card">
           <div class="guide-head">
             <div class="guide-number">07</div>
@@ -1181,7 +1052,6 @@
           </p>
         </div>
 
-        <!-- 08 -->
         <div class="guide-card">
           <div class="guide-head">
             <div class="guide-number">08</div>
@@ -1200,7 +1070,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 6 — PARA QUEM É / NÃO É
+       PARA QUEM É / NÃO É
   ============================================================ -->
   <section class="section section-card">
     <div class="container">
@@ -1234,7 +1104,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 7 — AUTORIDADE
+       AUTORIDADE
   ============================================================ -->
   <section class="section section-dark">
     <div class="container">
@@ -1252,10 +1122,11 @@
           <p><strong>Como pensar diante da situação real.</strong></p>
 
           <ul class="authority-list">
+            <li><i class="fas fa-circle"></i> 17 anos de banho e tosa</li>
             <li><i class="fas fa-circle"></i> 5 anos de experiência na Cobasi</li>
             <li><i class="fas fa-circle"></i> 3 anos como líder técnico na Petz</li>
             <li><i class="fas fa-circle"></i> 2 anos de gestão na Petland</li>
-            <li><i class="fas fa-circle"></i> +200 profissionais treinados</li>
+            <li><i class="fas fa-circle"></i> 7 anos como profissional autônomo</li>
           </ul>
 
           <div class="authority-quote">
@@ -1272,71 +1143,9 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 8 — PROVA SOCIAL
+       OFERTA
   ============================================================ -->
-  <section class="section section-card">
-    <div class="container">
-      <h2 class="section-title">Eles estavam onde você está</h2>
-
-      <div class="testimonial-grid">
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">
-            “No meu primeiro teste, quase chorei de nervoso. Hoje sou a tosadora que recebe os cães mais difíceis do pet shop. O Intensivão mudou minha postura e minha renda.”
-          </p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <img src="https://i.imgur.com/5jRtZWf.png" alt="Mariana">
-            </div>
-            <div>
-              <strong>Mariana</strong>
-              <span>Aluna</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">
-            “Me chamavam de lenta. Aprendi a organizar minha cabeça e meu tempo. O dono do pet shop me elogiou na frente de todo mundo.”
-          </p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <img src="https://i.imgur.com/6roAEQI.png" alt="Carla">
-            </div>
-            <div>
-              <strong>Carla</strong>
-              <span>Aluna</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">
-            “Estava a duas semanas de largar a profissão. O Intensivão me resgatou. Hoje vivo da tosa e não troco por nada.”
-          </p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <img src="https://i.imgur.com/8I97EUH.png" alt="Rafael">
-            </div>
-            <div>
-              <strong>Rafael</strong>
-              <span>Aluno</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="proof-stats">
-        <strong>+200 profissionais</strong> já passaram pelo Intensivão
-      </p>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       SEÇÃO 9 — OFERTA
-  ============================================================ -->
-  <section class="section section-dark" id="oferta">
+  <section class="section section-card" id="oferta">
     <div class="container">
       <div class="offer-card">
         <h2 class="offer-name">INTENSIVÃO PET PRO</h2>
@@ -1349,7 +1158,6 @@
         <ul class="offer-deliverables">
           <li>Manual de Campo em vídeo (8 guias práticos)</li>
           <li>Acesso digital (celular, tablet ou computador)</li>
-          <li>Suporte via WhatsApp</li>
         </ul>
 
         <div class="offer-price">R$ 97</div>
@@ -1360,22 +1168,18 @@
           Se você não sentir que está mais preparado, devolvemos 100% do valor.
         </div>
 
-        <!-- 🔗 SUBSTITUIR href pelo link real do checkout -->
-        <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" target="_blank" rel="noopener" class="cta-primary">
+        <!-- 🔗 SUBSTITUIR href pelo link real da Kiwify -->
+        <a href="[COLAR AQUI QUANDO EXISTIR]" target="_blank" rel="noopener" class="cta-primary">
           <i class="fas fa-book-open"></i> QUERO MEU MANUAL DE CAMPO
         </a>
-
-        <p class="offer-support">
-          <i class="fab fa-whatsapp"></i> Dúvidas? Fale com a gente pelo WhatsApp.
-        </p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       SEÇÃO 10 — FAQ
+       FAQ
   ============================================================ -->
-  <section class="section section-card">
+  <section class="section section-dark">
     <div class="container">
       <h2 class="section-title">Perguntas frequentes</h2>
 
@@ -1496,7 +1300,7 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              Suporte pelo WhatsApp.
+              Para dúvidas de acesso, use o contato de suporte informado no e-mail de confirmação da sua compra.
             </div>
           </div>
         </div>
@@ -1518,7 +1322,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 11 — CTA FINAL
+       CTA FINAL
   ============================================================ -->
   <section class="final-cta">
     <div class="container">
@@ -1527,18 +1331,12 @@
         <span class="highlight">Precisa saber o que fazer quando acontecer.</span>
       </h2>
 
-      <!-- 🔗 SUBSTITUIR href pelo link real do checkout -->
-      <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" target="_blank" rel="noopener" class="cta-primary">
+      <!-- 🔗 SUBSTITUIR href pelo link real da Kiwify -->
+      <a href="[COLAR AQUI QUANDO EXISTIR]" target="_blank" rel="noopener" class="cta-primary">
         <i class="fas fa-book-open"></i> QUERO MEU MANUAL DE CAMPO
       </a>
     </div>
   </section>
-
-  <!-- WHATSAPP FLUTUANTE -->
-  <!-- 📱 SUBSTITUIR o número se quiser -->
-  <a class="whatsapp-float" href="https://wa.me/5511999999999?text=Oi%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20Manual%20de%20Campo" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -1551,7 +1349,6 @@
        SCRIPTS
   ============================================================ -->
   <script>
-    // PLAY / PAUSE DO VÍDEO
     function playVideo() {
       const v = document.getElementById('mainVideo');
       const btn = document.querySelector('.video-play-button');
@@ -1576,7 +1373,6 @@
       });
     });
 
-    // FAQ ACCORDION
     function toggleFaq(button) {
       const item = button.closest('.faq-item');
       item.classList.toggle('open');
